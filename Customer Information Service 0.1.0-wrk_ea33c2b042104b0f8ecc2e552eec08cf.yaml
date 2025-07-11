@@ -47,7 +47,7 @@ collection:
     meta:
       id: req_abec162ea80f48bf89027ed2eb3e294b
       created: 1752230144283
-      modified: 1752230144283
+      modified: 1752230247324
       isPrivate: false
       description: Fetch a customers information
       sortKey: -1752230144283
@@ -60,12 +60,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: https://api.kong-air
+  - url: https://api.kong-air/customer
     name: New Request
     meta:
       id: req_16525427e0674bd28e8a91c9880b190b
       created: 1752230146631
-      modified: 1752230153427
+      modified: 1752230261026
       isPrivate: false
       description: ""
       sortKey: -1752230146631
