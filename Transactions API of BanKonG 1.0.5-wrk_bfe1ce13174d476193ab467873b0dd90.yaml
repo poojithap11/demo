@@ -32,73 +32,6 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{ _.base_url }}/transactions"
-    name: Create new transaction
-    meta:
-      id: req_5be61def8508452c9e4c36de1b404db9
-      created: 1752228318280
-      modified: 1752228318280
-      isPrivate: false
-      description: Initiate a transaction
-      sortKey: -1752228318280
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-          "id": 42,
-          "source": "GR872659435350353",
-          "senderName": "Max Mustermann",
-          "destination": "DE8412325587359375895",
-          "amount": 42,
-          "currency": "EUR",
-          "subject": "Invoice #42-08/15"
-        }
-    headers:
-      - name: Content-Type
-        value: application/json
-    authentication:
-      type: apikey
-      key: apikey
-      value: "{{ _.apikey }}"
-      addTo: header
-    scripts:
-      preRequest: ""
-      afterResponse: ""
-    settings:
-      renderRequestBody: true
-      encodeUrl: true
-      followRedirects: global
-      cookies:
-        send: true
-        store: true
-      rebuildPath: true
-  - url: "{{ _.base_url }}/transactions/{{ _.id }}"
-    name: Cancel a transaction
-    meta:
-      id: req_be0ab72ba8fe40aebf1e92bb5f305ca5
-      created: 1752228318281
-      modified: 1752228318281
-      isPrivate: false
-      description: Cancel a transaction
-      sortKey: -1752228318281
-    method: DELETE
-    authentication:
-      type: apikey
-      key: apikey
-      value: "{{ _.apikey }}"
-      addTo: header
-    scripts:
-      preRequest: ""
-      afterResponse: ""
-    settings:
-      renderRequestBody: true
-      encodeUrl: true
-      followRedirects: global
-      cookies:
-        send: true
-        store: true
-      rebuildPath: true
   - url: "{{ _.base_url }}/transactions/{{ _.id }}"
     name: Get specific transaction
     meta:
@@ -125,43 +58,30 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: https://localhost:3000
+  - url: http://127.0.0.1:8200/v1/secret/data/myapp
     name: New Request
     meta:
-      id: req_5f06af4930114a54944182059542a33a
-      created: 1752228320793
-      modified: 1752228328127
+      id: req_034311e3a47b4439a06dec72a9d796f0
+      created: 1753705068726
+      modified: 1753705122938
       isPrivate: false
       description: ""
-      sortKey: -1752228320793
+      sortKey: -1753705068726
     method: GET
     headers:
       - name: User-Agent
         value: insomnia/11.3.0
-    scripts:
-      preRequest: ""
-      afterResponse: ""
-    settings:
-      renderRequestBody: true
-      encodeUrl: true
-      followRedirects: global
-      cookies:
-        send: true
-        store: true
-      rebuildPath: true
-  - url: https://localhost:8000
-    name: New Request
-    meta:
-      id: req_bb71afc0f7e44148a2e1e87344d082b7
-      created: 1752228823139
-      modified: 1752228836047
-      isPrivate: false
-      description: ""
-      sortKey: -1752228823139
-    method: POST
-    headers:
-      - name: User-Agent
-        value: insomnia/11.3.0
+        id: pair_bc92597d0e7c46b6934ee9e4a8d19922
+      - id: pair_446f6d92990340749621ed3d56ce4159
+        name: X-Vault-Token
+        value: "{{ _.access_token.vault_token }}"
+        description: ""
+        disabled: false
+      - id: pair_76f0b2d1bbbf4b8cbd6e4779409738a7
+        name: Authorization
+        value: Bearer {{ _.access_token.api_key }}
+        description: ""
+        disabled: false
     settings:
       renderRequestBody: true
       encodeUrl: true
