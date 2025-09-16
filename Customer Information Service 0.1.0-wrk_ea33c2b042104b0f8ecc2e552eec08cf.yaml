@@ -16,9 +16,6 @@ collection:
       description: Endpoint that returns the service health status.
       sortKey: -1752230144283
     method: GET
-    scripts:
-      preRequest: ""
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -37,9 +34,6 @@ collection:
       description: Fetch a customers information
       sortKey: -1752230144283
     method: GET
-    scripts:
-      preRequest: ""
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -58,9 +52,6 @@ collection:
       description: Fetch a customers information
       sortKey: -1752230144283
     method: GET
-    scripts:
-      preRequest: ""
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -82,9 +73,6 @@ collection:
     headers:
       - name: User-Agent
         value: insomnia/11.3.0
-    scripts:
-      preRequest: ""
-      afterResponse: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -222,4 +210,4 @@ spec:
   meta:
     id: spc_167fdd444e44434f8a525f9b6c6fe668
     created: 1752230135915
-    modified: 1752230135915
+    modified: 1757998303732
